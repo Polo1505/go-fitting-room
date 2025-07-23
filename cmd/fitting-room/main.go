@@ -7,8 +7,8 @@ import (
 	"github.com/Polo1505/go-fitting-room/internal/config"
 	"github.com/Polo1505/go-fitting-room/internal/http-server/handlers"
 	"github.com/Polo1505/go-fitting-room/internal/storage/postgresql"
-	"github.com/go-chi/chi"
-	"github.com/go-chi/chi/middleware"
+	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi/v5/middleware"
 
 	// "github.com/Polo1505/go-fitting-room/internal/storage/sqlite"
 
@@ -50,7 +50,6 @@ func main() {
 	// }
 	// log.Info("Costume created successfully", slog.String("costume_name", "Costume 1"))
 
-	// TODO: init router: chi
 	router := chi.NewRouter()
 
 	router.Use(middleware.RequestID)
